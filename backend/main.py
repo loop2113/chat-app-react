@@ -30,6 +30,9 @@ async def authenticate(user: User):
     )
     return response.json()
 
-
+@app.get('/')
+async def checkConnected():
+    connected = "Connected to backend server."
+    return connected
 
 
